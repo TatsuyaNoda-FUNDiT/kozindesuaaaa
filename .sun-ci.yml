@@ -7,4 +7,4 @@ jobs:
     stage: build
     image: ubuntu:latest
     script:
-      - echo "Hello, Sun CI! The job is running succesああああsfully!"
+      - echo "Hello"
