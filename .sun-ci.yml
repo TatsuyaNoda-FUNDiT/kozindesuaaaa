@@ -1,1 +1,10 @@
-ewa
+version: 1
+stages:
+  - build
+
+jobs:
+  - name: test-job
+    stage: build
+    image: ubuntu:latest
+    script:
+      - echo "Hello, Sun CI! The job is running successfully!"
