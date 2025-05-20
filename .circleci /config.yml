@@ -8,7 +8,7 @@ jobs:
       - run:
           name: Show custom AWS env variable
           command: |
-            echo "AWS_ACCESS_KEY_ID_INT is: ${AWS_ACCESS_KEY_ID_INT}"
+            echo "あああAWS_ACCESS_KEY_ID_INT is: ${AWS_ACCESS_KEY_ID_INT}"
 
 workflows:
   version: 2
