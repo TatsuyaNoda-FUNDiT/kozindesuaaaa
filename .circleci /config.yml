@@ -1,0 +1,17 @@
+version: 2.1
+
+jobs:
+  show-env:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - run:
+          name: Show custom AWS env variable
+          command: |
+            echo "AWS_ACCESS_KEY_ID_INT is: ${AWS_ACCESS_KEY_ID_INT}"
+
+workflows:
+  version: 2
+  test-workflow:
+    jobs:
+      - show-env
