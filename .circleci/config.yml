@@ -1,17 +1,15 @@
 version: 2.1
 
 jobs:
-  show-env:
+  build:
     docker:
       - image: cimg/base:stable
     steps:
-      - run:
-          name: Show custom AWS env variable
-          command: |
-            echo "あああAWS_ACCESS_KEY_ID_INT is: ${AWS_ACCESS_KEY_ID_INT}"
+      - checkout
+      - run: echo "CircleCIの設定ができました！"
 
 workflows:
   version: 2
-  test-workflow:
+  build_and_test:
     jobs:
-      - show-env
+      - build
